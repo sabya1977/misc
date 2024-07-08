@@ -1,0 +1,20 @@
+To see the list of installed packages, use this command:
+apt list --installed
+
+To see how many entries there are, we can pipe through wc, as we did before.
+apt list --installed | wc -l
+
+To investigate a single package, use the apt show command with the name of the package.
+apt show xml-core
+
+Using dpkg Package Manager:
+dpkg --get-selections | grep "code"
+
+Another way is to use the dpkg-query tool:
+dpkg-query -l
+
+Using Flatpak:
+flatpak list --app
+
+To know where the installed package is stored:
+sudo dpkg -L code
